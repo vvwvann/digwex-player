@@ -1,0 +1,13 @@
+{
+  "serverUrl": "http://player.advelit.com",
+  "expanding": 15,
+  "autostart": 0,
+  "contentPath": "content",
+  "fullscreen": true,
+  "position": {
+    "x": 0,
+    "y": 0,
+    "width": 640,
+    "height": 360
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "digwex",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Digwex electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "set ELECTRON_ENV=dev&&electron .",
+    "package-linux": "electron-packager .  --overwrite --platform=linux --arch=x64 --prune=true --out=../production",
+    "package-win": "electron-packager . --overwrite --platform=win32 --out=../build",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --out=../production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.2",
+    "electron-packager": "^12.1.0",
+    "eslint": "^6.8.0"
+  },
+  "dependencies": {
+    "portscanner": "2.2.0",
+    "electron-settings": "^3.2.0",
+    "smooth-scrollbar": "^8.4.1"
+  }
+}

@@ -1,0 +1,21 @@
+@import "mixinsAndFunctions";
+
+$c: (
+        hero: #0836A7,
+        confirm: #2bc784,
+        warning: #e6af57,
+        danger: #e64e48,
+        note: #fdc625,
+        message: #8bd779,
+        b: #ffffff,
+        f: #3D3D5F,
+);
+
+@each $name, $color in $c {
+  $c: map-merge($c, (#{$name + '-hover'}: lighten($color, 5)));
+  $c: map-merge($c, (#{$name + '-sc'}: set-color($color)));
+  $c: map-merge($c, (#{$name + '-rgb'}: #{red($color), green($color), blue($color)}));
+  $c: map-merge($c, (#{$name + '-sc-rgb'}: #{red(set-color($color)), green(set-color($color)), blue(set-color($color))}));
+}
+
+$f: 'Inter UI', sans-serif;

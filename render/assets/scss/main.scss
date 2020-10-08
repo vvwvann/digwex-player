@@ -1,0 +1,35 @@
+@import "variables";
+@import "globalStyling";
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+.splash-container-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font: rem(26) / rem(36) $f;
+  max-width: rem(660);
+  text-align: center;
+  a, strong {
+    color: sc(b);
+    font-weight: 700;
+  }
+  .logo {
+    width: rem(318);
+  }
+  h1 {
+    font: 700 rem(32) / normal $f;
+    margin: rem(142) 0 rem(56);
+  }
+  h2 {
+    font: 700 rem(86) / normal $f;
+    letter-spacing: rem(10);
+    margin: 0 0 rem(48);
+    color: sc(b);
+  }
+}

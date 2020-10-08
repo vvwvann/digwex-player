@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigWex.Core", "DigWex.Core\DigWex.Core.csproj", "{30D69EBB-A387-4D3B-9B52-0228453204D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30D69EBB-A387-4D3B-9B52-0228453204D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D69EBB-A387-4D3B-9B52-0228453204D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D69EBB-A387-4D3B-9B52-0228453204D5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{30D69EBB-A387-4D3B-9B52-0228453204D5}.Debug|x86.Build.0 = Debug|Any CPU
+		{30D69EBB-A387-4D3B-9B52-0228453204D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D69EBB-A387-4D3B-9B52-0228453204D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D69EBB-A387-4D3B-9B52-0228453204D5}.Release|x86.ActiveCfg = Release|Any CPU
+		{30D69EBB-A387-4D3B-9B52-0228453204D5}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37082F2D-7D58-4B60-817A-BBDB0F82C995}
+	EndGlobalSection
+EndGlobal

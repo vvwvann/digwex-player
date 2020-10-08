@@ -1,0 +1,129 @@
+@import "variables";
+:root {
+  @each $name, $color in $c {
+    --#{$name}: #{$color};
+  }
+}
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  border-radius: 0;
+  background: none;
+  vertical-align: top;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-tap-highlight-color: transparent;
+  &, &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 300ms color, 300ms background;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font: inherit;
+  appearance: none;
+  display: block;
+  color: inherit;
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    font-family: inherit;
+  }
+  &:-moz-placeholder {
+    opacity: 1;
+    font-family: inherit;
+  }
+  &::-moz-placeholder {
+    opacity: 1;
+    font-family: inherit;
+  }
+  &:-ms-input-placeholder {
+    opacity: 1;
+    font-family: inherit;
+  }
+}
+
+html {
+  font: 10px / 1.9 $f;
+  -webkit-text-size-adjust: 100%;
+  background: #f4f4f4;
+  color: sc(b, 0.8);
+  height: 100%;
+  max-width: 100vw;
+  user-select: none;
+  body, #root {
+    width: 100%;
+  }
+  @media screen and (max-width: 920px) {
+    font-size: 6px;
+  }
+}
+body {
+  font-size: rem(18);
+  @include mobile {
+    font-size: rem(14);
+  }
+}
+li {
+  display: block;
+}
+.ellipsis-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.capitalize-text {
+  text-transform: capitalize;
+}
+input {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &::-ms-clear {
+    display: none;
+  }
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+[data-react-beautiful-dnd-drag-handle="0"] {
+  cursor: pointer;
+}
+.color- {
+  &danger {
+    color: c(danger) !important;
+  }
+  &confirm {
+    color: c(confirm) !important;
+  }
+  &hero {
+    color: c(hero) !important;
+  }
+}
+::selection {
+  background: c(hero, 0.15);
+  color: c(hero, 1);
+}

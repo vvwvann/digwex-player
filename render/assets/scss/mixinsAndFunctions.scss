@@ -1,0 +1,101 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+@function set-color($color, $color-dark: #000000, $color-light: #ffffff) {
+  @if ($color == #2bc784 or $color == #e64e48 or $color == #e6af57) {
+    @return $color-light;
+  }
+  @if (lightness($color) > 50) {
+    @return $color-dark;
+  } @else {
+    @return $color-light;
+  }
+}
+@function c($color, $opacity: 1) {
+  @if $opacity == 1 {
+    @return var(--#{$color});
+  } @else {
+    @return rgba(var(--#{$color}-rgb), $opacity);
+  }
+}
+@function ch($color) {
+  @return var(--#{$color}-hover);
+}
+@function sc($color, $opacity: 1) {
+  @if $opacity == 1 {
+    @return var(--#{$color}-sc);
+  } @else {
+    @return rgba(var(--#{$color}-sc-rgb), $opacity);
+  }
+}
+@function cr($color) {
+  @return var(--#{$color}-rgb);
+}
+@function scr($color) {
+  @return var(--#{$color}-sc-rgb);
+}
+@mixin over($n1, $n2) {
+  --#{$n1}: var(--#{$n2});
+  --#{$n1}-hover: var(--#{$n2}-hover);
+  --#{$n1}-sc: var(--#{$n2}-sc);
+  --#{$n1}-rgb: var(--#{$n2}-rgb);
+  --#{$n1}-sc-rgb: var(--#{$n2}-sc-rgb);
+}
+
+@mixin hover($el: null) {
+  @media (hover: hover) {
+    @if $el != null {
+      #{$el}:hover & {
+        @content;
+      }
+    } @else {
+      &:hover {
+        @content;
+      }
+    }
+  }
+}
+
+@function per($size, $guide: 1920) {
+  $per: $size / $guide * 100;
+  @return #{$per + '%'};
+}
+
+@function rem($size) {
+  $remSize: $size / 10;
+  @if $size == 1 {
+    @return #{$size}px;
+  }
+  @return #{$remSize}rem;
+}
+
+@function -rem($size) {
+  $remSize: $size / 10;
+  @if $size == 1 {
+    @return -#{$size}px;
+  }
+  @return -#{$remSize}rem;
+}
+
+@mixin desktop {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}

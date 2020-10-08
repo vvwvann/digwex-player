@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Inter UI';
+    src: url('InterUI-Medium.eot');
+    src: url('InterUI-Medium.eot?#iefix') format('embedded-opentype'),
+    url('InterUI-Medium.woff2') format('woff2'),
+    url('InterUI-Medium.woff') format('woff'),
+    url('InterUI-Medium.ttf') format('truetype'),
+    url('InterUI-Medium.svg#InterUI-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter UI';
+    src: url('InterUI-Regular.eot');
+    src: url('InterUI-Regular.eot?#iefix') format('embedded-opentype'),
+    url('InterUI-Regular.woff2') format('woff2'),
+    url('InterUI-Regular.woff') format('woff'),
+    url('InterUI-Regular.ttf') format('truetype'),
+    url('InterUI-Regular.svg#InterUI-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter UI';
+    src: url('InterUI-Bold.eot');
+    src: url('InterUI-Bold.eot?#iefix') format('embedded-opentype'),
+    url('InterUI-Bold.woff2') format('woff2'),
+    url('InterUI-Bold.woff') format('woff'),
+    url('InterUI-Bold.ttf') format('truetype'),
+    url('InterUI-Bold.svg#InterUI-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
